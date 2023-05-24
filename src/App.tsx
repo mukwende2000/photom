@@ -1,7 +1,64 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Root from './layouts/Root'
+import Home from './routes/Home'
+import About from './routes/About'
+import Blogs from './routes/Blogs'
+import Blog from './routes/Blog'
+import Gallery from './routes/Galley'
+import History from './routes/History'
+import Menu from './routes/Menu'
+import Faq from './routes/Faq'
+import Contact from './routes/Contact'
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Root />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: '/about',
+        element: <About />
+      },
+      {
+        path: '/menu',
+        element: <Menu />
+      },
+      {
+        path: '/Faq',
+        element: <Faq />
+      },
+      {
+        path: '/contact',
+        element: <Contact />
+      },
+      {
+        path: '/blogs',
+        element: <Blogs />
+      },
+      {
+        path: '/blogs/:blogId',
+        element: <Blog />
+      },
+      {
+        path: '/history',
+        element: <History />
+      },
+      {
+        path: '/gallery',
+        element: <Gallery />
+      }
+    ]
+  }
+])
+
 function App() {
   return (
     <div>
-      <h1 className="text-red-500">Hello World</h1>
+      <RouterProvider router={router} />
     </div>
   )
 }
