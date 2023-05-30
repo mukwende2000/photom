@@ -46,7 +46,7 @@ function index() {
             <button onClick={() => setCount(1)} className="bg-primary font-bold mx-3 rounded py-3 hover:text-primary hover:bg-white px-7 duration-300">2</button>
           </div>
         </div>
-        <div className="h-60 bg-[url('src/assets/images/img9.jpg')] bg-no-repeat bg-center bg-cover">
+        <div className="h-60 bg-[url('../../assets/images/img9.jpg')] bg-no-repeat bg-center bg-cover">
           <div className="container md:flex items-center justify-between">
             <Heading title="booking table for your family members" subtitle="Need a Table On Coffee House"/>
             <Button background="bg-primary" width="">
