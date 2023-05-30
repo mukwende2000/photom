@@ -1,14 +1,19 @@
-import logo from './images/logo.png'
-import img1 from './images/gallery1.jpg'
-import img2 from './images/gallery2.jpg'
-import img3 from './images/gallery3.jpg'
-import img4 from './images/gallery4.jpg'
-import img5 from './images/gallery5.jpg'
-import img6 from './images/gallery6.jpg'
-
 import { FaLocationArrow, FaEnvelope, FaPhone} from 'react-icons/fa'
 
-function index() {
+import logo from './images/logo.png'
+import img16 from '../../assets/images/img16.jpg'
+import img33 from '../../assets/images/img33.jpg'
+import img8 from '../../assets/images/img34.jpg'
+import img74 from '../../assets/images/img35.jpg'
+import img68 from '../../assets/images/img36.jpg'
+import img69 from '../../assets/images/img39.jpg'
+
+import Thumbnail from '../Thumbnail'
+
+export default function index() {
+
+  const thumbnails: string[] = [img16, img33, img8, img74, img68, img69]
+
   return (
     <footer className='py-10 bg-black text-white'>
       <div className={`container`}>
@@ -37,7 +42,6 @@ function index() {
             <div className='my-16 md:m-0 basis-1/2'>
                 <h6 className='mb-5'>Contact Us</h6>
                 <ul>
-                  <div>
                     <li className='flex items-center gap-5'>
                       <FaLocationArrow className='text-primary text-3xl' />
                       <div>
@@ -59,31 +63,13 @@ function index() {
                         <p>+012 (345) 6789</p>
                       </div>
                     </li>
-                  </div>
                 </ul>
             </div>
 
             <div>
             <h6 className='mb-5'>Gallery</h6>
             <div className='grid grid-cols-3 basis-full gap-2' style={{gridTemplateRows: 'repeat(2, 100px)'}}>
-              <div>
-                <img src={img2} className='h-full w-full' alt="" />
-              </div>
-              <div>
-                <img src={img1} className='h-full w-full' alt="" />
-              </div>
-              <div>
-                <img src={img3} className='h-full w-full' alt="" />
-              </div>
-              <div>
-                <img src={img4} className='h-full w-full' alt="" />
-              </div>
-              <div>
-                <img src={img5} className='h-full w-full' alt="" />
-              </div>
-              <div>
-                <img src={img6} className='h-full w-full' alt="" />
-              </div>
+                 {thumbnails.map((thumbnail, index) => <Thumbnail key={index} url={thumbnail}/>)}
             </div>
           </div>
         </div>
@@ -92,5 +78,3 @@ function index() {
     </footer>
   )
 }
-
-export default index

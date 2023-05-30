@@ -1,0 +1,17 @@
+.link {
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-block: .6rem;
+    text-transform: uppercase;
+    display: block;
+    width: fit-content;
+    letter-spacing: 2px;
+    transition: color .4s;
+}
+.link:hover {
+    color: #b99272;
+}
+.active {
+    text-decoration: underline;
+}

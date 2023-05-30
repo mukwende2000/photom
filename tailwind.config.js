@@ -5,13 +5,14 @@ export default {
     './src/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
-    container: {
-      center:true,
-      padding: '3rem',
-    },
+   
     extend: {
+      backgroundImage: {
+        hero: "url('.src/routes/Home/images/hero1.jpg')"
+      },
       colors: {
-        primary: '#b99272'
+        primary: '#b99272',
+        secondary: 'white',
       }
     },
   },
