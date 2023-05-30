@@ -6,7 +6,7 @@ import styles from './Hero.module.scss'
 function Hero({ heading, bg }: { heading:string, bg: string }) {
   const { pathname } = useLocation()
   return (
-    <section className={`text-secondary ${bg} bg-cover bg-center ${styles.sec}`}>
+    <section className={`$ text-secondary ${bg} bg-[url(../assets/images/logo.png)] bg-cover bg-center ${bg}`}>
         <div className="container py-40">
             { pathname === '/' && <p className="uppercase flex items-center gap-2"><span className="inline-block h-[1px] w-8 bg-primary"></span> welcome to the kaffen</p> }
             <h1 className="w-8/12 md:w-6/12 text-5xl md:text-8xl my-8">{ heading }</h1>
