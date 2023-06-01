@@ -1,12 +1,12 @@
-import Button from "./Button"
-import Navbar from "./Navbar"
-import logo from '../assets/images/logo.png'
+import Button from "../Button"
+import Navbar from "../Navbar"
+import logo from '../../assets/images/logo.png'
 import { useState } from "react"
 
-function Header() {
+function index() {
     const [menuIsOpen, setMenuIsOpen] = useState(false)
   return (
-    <header className="md:bg-[#0e1317]">
+    <header className="bg-[#0e1317] sticky top-0 z-30">
     <div className="container py-5 flex flex-wrap items-center justify-between">
           <div className={`relative z-20 `}>
                 <div className="w-[40%]">
@@ -27,4 +27,4 @@ function Header() {
   )
 }
 
-export default Header
+export default index

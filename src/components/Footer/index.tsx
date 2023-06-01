@@ -2,17 +2,17 @@ import { FaLocationArrow, FaEnvelope, FaPhone} from 'react-icons/fa'
 
 import logo from './images/logo.png'
 import img16 from '../../assets/images/img16.jpg'
-import img33 from '../../assets/images/img33.jpg'
-import img8 from '../../assets/images/img34.jpg'
-import img74 from '../../assets/images/img35.jpg'
-import img68 from '../../assets/images/img36.jpg'
+import img23 from '../../assets/images/img23.jpg'
+import img8 from '../../assets/images/img8.jpg'
+import img74 from '../../assets/images/img74.jpg'
+import img68 from '../../assets/images/img68.jpg'
 import img69 from '../../assets/images/img39.jpg'
 
-import Thumbnail from '../Thumbnail'
+import Thumbnail from '../Thumbnail/indext'
 
 export default function index() {
 
-  const thumbnails: string[] = [img16, img33, img8, img74, img68, img69]
+  const thumbnails: string[] = [img16, img23, img8, img74, img68, img69]
 
   return (
     <footer className='py-10 bg-black text-white'>

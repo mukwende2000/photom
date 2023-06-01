@@ -3,7 +3,12 @@ import styles from './Navbar.module.scss'
 import { useEffect, useState } from 'react'
 import { FaCaretDown } from 'react-icons/fa'
 
-function index({ menuIsOpen, setMenuIsOpen} : {menuIsOpen: boolean, setMenuIsOpen:React.Dispatch<React.SetStateAction<boolean>>}) {
+type Props = {
+  menuIsOpen: boolean
+  setMenuIsOpen:React.Dispatch<React.SetStateAction<boolean>>
+}
+
+function index({ menuIsOpen, setMenuIsOpen} : Props) {
 
   const [width, setWidth] = useState(innerWidth)
   useEffect(() => {
@@ -18,12 +23,12 @@ function index({ menuIsOpen, setMenuIsOpen} : {menuIsOpen: boolean, setMenuIsOpe
   })
 
   return (
-    <nav className={`bg-black md:bg-[#0e1317] h-full fixed md:static left-0 right-0 z-10 ${ menuIsOpen ? 'top-0' : '-top-full'} duration-1000 md:duration-0`}>
-      <div className={` flex flex-col md:flex-row items-center gap-5 ${menuIsOpen && width < 768 ? 'opacity-100' : 'opacity-0 md:opacity-100'} pt-32 md:pt-0 duration-[3s] delay-1000`}>
-          <NavLink className={`${styles.link} link`} to="/">Home</NavLink>
-          <NavLink className={`${styles.link} link`} to="/about">About</NavLink>
-          <NavLink className={`${styles.link} link`} to="/menu">Menu</NavLink>
-          <NavLink className={`${styles.link} link group`} to="/page">
+    <nav className={`bg-[#0e1317] h-full fixed md:static left-0 right-0 z-10 ${ menuIsOpen ? 'top-0' : '-top-full'} duration-500`}>
+      <div className={` flex flex-col md:flex-row items-center text-center gap-5 ${menuIsOpen && width < 768 ? 'opacity-100' : 'opacity-0 md:opacity-100'} pt-32 md:pt-0 duration-[1s] delay-1000`}>
+          <NavLink onClick={() => {setMenuIsOpen(false)}} className={`${styles.link} link`} to="/">Home</NavLink>
+          <NavLink onClick={() => {setMenuIsOpen(false)}} className={`${styles.link} link`} to="/about">About</NavLink>
+          <NavLink onClick={() => {setMenuIsOpen(false)}} className={`${styles.link} link`} to="/menu">Menu</NavLink>
+          <NavLink onClick={() => {setMenuIsOpen(false)}} className={`${styles.link} link group`} to="/page">
             <span className='flex items-center'>page <FaCaretDown /></span>
             
             <ul className={`text-white p-5 absolute ml-10 hidden group-hover:block opacity-0 group-hover:opacity-100 duration-300`}>
@@ -31,8 +36,8 @@ function index({ menuIsOpen, setMenuIsOpen} : {menuIsOpen: boolean, setMenuIsOpe
                 <li><NavLink to="/gallery">Galley</NavLink></li>
             </ul>
           </NavLink>
-          <NavLink className={`${styles.link} link`} to="/blogs">Blogs</NavLink>
-          <NavLink className={`${styles.link} link`} to="/contact">Contact</NavLink>
+          <NavLink onClick={() => {setMenuIsOpen(false)}} className={`${styles.link} link`} to="/blogs">Blogs</NavLink>
+          <NavLink onClick={() => {setMenuIsOpen(false)}} className={`${styles.link} link`} to="/contact">Contact</NavLink>
       </div>
     </nav>
   )

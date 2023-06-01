@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom"
+import { useState } from "react"
+
 import Heading from "../../components/Heading"
 import Hero from "../../components/Hero"
-import { blogs } from "../../data/blogs"
-import { useState } from "react"
-import { FaCalendar, FaCaretRight, FaComment } from "react-icons/fa"
 import Button from "../../components/Button"
+
+import { blogs } from "../../data/blogs"
+import { FaCalendar, FaCaretRight, FaComment } from "react-icons/fa"
+
+import styles from './Blogs.module.scss'
 
 import comp1 from '../../assets/images/img77.png'
 import comp2 from '../../assets/images/img78.png'
@@ -12,6 +16,7 @@ import comp3 from '../../assets/images/img79.png'
 import comp4 from '../../assets/images/img80.png'
 import comp5 from '../../assets/images/img81.png'
 import comp6 from '../../assets/images/img82.png'
+import BookingTable from "../Home/components/BookingTable"
 
 function index() {
   const [count, setCount] =  useState(0)
@@ -19,10 +24,10 @@ function index() {
   const blogPage = blogs[count]
   return (
       <section className="py-10">
-      <Hero heading="Blog grid" bg="bg-[url('src/assets/images/img58.jpg')]" />
+      <Hero heading="Blog grid" bg={`${styles.blogs}`} />
         <div className="container">
           <div>
-            <Heading title="get every single update" subtitle="Read Some Latest Blog & News" isCenter />
+            <Heading title="get every single update" subtitle="Read Some Latest Blog & News" centerOnMediumScreens />
           </div>
           <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
              { blogPage.map((blog, index) => {
@@ -46,16 +51,11 @@ function index() {
             <button onClick={() => setCount(1)} className="bg-primary font-bold mx-3 rounded py-3 hover:text-primary hover:bg-white px-7 duration-300">2</button>
           </div>
         </div>
-        <div className="h-60 bg-[url('../../assets/images/img9.jpg')] bg-no-repeat bg-center bg-cover">
-          <div className="container md:flex items-center justify-between">
-            <Heading title="booking table for your family members" subtitle="Need a Table On Coffee House"/>
-            <Button background="bg-primary" width="">
-              Booking Table <FaCaretRight className="inline text-xl" />
-            </Button>
-          </div>
+        <div className="h-60 my-20 bg-[url('../../assets/images/img9.jpg')] bg-no-repeat bg-center bg-cover">
+        <BookingTable />
           
         </div>
-        <div className="flex justify-evenly items-center flex-col md:flex-row gap-10 my-10">
+        <div className="flex justify-evenly items-center flex-col md:flex-row gap-10 my-20">
           <img src={comp1} alt="" className="w-[120px] grayscale" />
           <img src={comp2} alt="" className="w-[120px]" />
           <img src={comp3} alt="" className="w-[120px]" />
