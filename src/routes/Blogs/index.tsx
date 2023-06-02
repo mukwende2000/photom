@@ -15,7 +15,7 @@ import comp3 from '../../assets/images/img79.png'
 import comp4 from '../../assets/images/img80.png'
 import comp5 from '../../assets/images/img81.png'
 import comp6 from '../../assets/images/img82.png'
-import BookingTable from "../Home/components/BookingTable"
+import CallToAction from "../Home/components/CallToAction"
 
 function index() {
   const [count, setCount] =  useState(0)
@@ -26,7 +26,7 @@ function index() {
       <Hero heading="Blog grid" bg={`${styles.blogs}`} />
         <div className="container">
           <div>
-            <Heading title="get every single update" subtitle="Read Some Latest Blog & News" centerOnMediumScreens />
+            <Heading title="get every single update" subtitle="Read Some Latest Blog & News"  />
           </div>
           <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
              { blogPage.map((blog, index) => {
@@ -51,7 +51,7 @@ function index() {
           </div>
         </div>
         <div className="h-60 my-20 bg-[url('../../assets/images/img9.jpg')] bg-no-repeat bg-center bg-cover">
-        <BookingTable />
+        <CallToAction title="need a table on coffee house" subTitle="Need A Table For Your Family" />
           
         </div>
         <div className="flex justify-evenly items-center flex-col md:flex-row gap-10 my-20">

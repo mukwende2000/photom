@@ -4,13 +4,8 @@ import Hero from "../../components/Hero"
 import styles from './Contact.module.scss'
 import Button from "../../components/Button"
 import Heading from "../../components/Heading"
+import Sponsors from "../../components/Sponsors"
 
-import comp1 from '../../assets/images/img77.png'
-import comp2 from '../../assets/images/img78.png'
-import comp3 from '../../assets/images/img79.png'
-import comp4 from '../../assets/images/img80.png'
-import comp5 from '../../assets/images/img81.png'
-import comp6 from '../../assets/images/img82.png'
 
 function index() {
   return (
@@ -44,7 +39,7 @@ function index() {
         </div>
         <div className="py-10">
           <form className="bg-black p-5">
-            <Heading centerOnMediumScreens title="contact us" subtitle="Send Us a Message" />
+            <Heading  title="contact us" subtitle="Send Us a Message" />
             <div>
                 <div className="flex flex-col md:flex-row md:gap-10">
                   <input className="w-full p-5 my-2 h-14 bg-black rounded border border-primary" type="text" placeholder="Full Name"/>
@@ -59,15 +54,8 @@ function index() {
             </div>
           </form>
         </div>
-        <div className="flex justify-evenly items-center flex-col md:flex-row gap-10 mb-10">
-          <img src={comp1} alt="" className="w-[120px] grayscale" />
-          <img src={comp2} alt="" className="w-[120px]" />
-          <img src={comp3} alt="" className="w-[120px]" />
-          <img src={comp4} alt="" className="w-[120px]" />
-          <img src={comp5} alt="" className="w-[120px]" />
-          <img src={comp6} alt="" className="w-[120px]" />
-        </div>
-      </div>
+      </div>  
+       <Sponsors/>
     </section>
     </>
   )

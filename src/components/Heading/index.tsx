@@ -4,9 +4,9 @@ type Props = {
   centerOnMediumScreens?: boolean
 }
 
-function Heading({ title, subtitle, centerOnMediumScreens }:Props) {
+function Heading({ title, subtitle, centerOnMediumScreens=true }:Props) {
   return (
-    <div className={`py-10 ${centerOnMediumScreens ? 'md:text-center' : null}`}>
+    <div className={`py-10 ${ centerOnMediumScreens? 'md:text-center' : null}`}>
       <p className="text-primary uppercase my-6">{ title }</p>
       <h5 className={`md:text-4xl text-3xl text-white`}>{ subtitle }</h5>
     </div>

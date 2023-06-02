@@ -2,9 +2,11 @@ import Aboutus from "./components/Aboutus"
 import Hero from '../../components/Hero'
 import Popular from '../../components/Popular'
 import styles from './Home.module.scss'
-import BookingTable from "./components/BookingTable"
+import CallToAction from "./components/CallToAction"
 import WhyChooseUs from './components/WhyChooseUs'
 import Heading from "../../components/Heading"
+
+import img66 from '../../assets/images/img66.jpg'
 
 import img2 from '../../assets/images/img12.jpg'
 import Service from "./components/Service"
@@ -17,10 +19,10 @@ function index() {
       <Aboutus /> 
       <div>
         <Popular>
-            <Heading title="choose best coffee" subtitle="Kaffen Popular Coffee" centerOnMediumScreens />
+            <Heading title="choose best coffee" subtitle="Kaffen Popular Coffee"  />
         </Popular>
       </div>       
-      <WhyChooseUs />
+      <WhyChooseUs url={img66} />
       <div className="flex overflow-auto whitespace-nowrap">
         {coffees.map(coffee => {
           return <Service url={coffee} alt="coffee">
@@ -28,7 +30,7 @@ function index() {
           </Service>
         })}
       </div>
-      <BookingTable />
+      <CallToAction title="need a table on coffee house" subTitle="Need A Table For Your Family?" />
     </> 
   )
 }

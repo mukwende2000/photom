@@ -1,14 +1,14 @@
 import Heading from '../../../../components/Heading'
 import Button from '../../../../components/Button'
 import { FaCaretRight } from 'react-icons/fa'
-import styles from './BookingTable.module.scss'
+import styles from './CallToAction.module.scss'
 
-function BookingTable() {
+function CallToAction({ title, subTitle}:{ title:string, subTitle:string}) {
   return (
     <div className={`${styles.main}`}>
         <div className="container md:flex items-center justify-between">
-            <Heading title="booking table for your family members" subtitle="Need a Table On Coffee House"/>
-            <Button background="bg-primary" others="">
+            <Heading title={title} subtitle={subTitle}/>
+            <Button background="bg-primary">
                 Booking Table <FaCaretRight className="inline text-xl" />
             </Button>
         </div>
@@ -16,4 +16,4 @@ function BookingTable() {
   )
 }
 
-export default BookingTable
+export default CallToAction

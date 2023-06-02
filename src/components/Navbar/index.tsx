@@ -34,6 +34,7 @@ function index({ menuIsOpen, setMenuIsOpen} : Props) {
             <ul className={`text-white p-5 absolute ml-10 hidden group-hover:block opacity-0 group-hover:opacity-100 duration-300`}>
                 <li><NavLink to="/history">History</NavLink></li>
                 <li><NavLink to="/gallery">Galley</NavLink></li>
+                <li><NavLink to="/faq">Faq</NavLink></li>
             </ul>
           </NavLink>
           <NavLink onClick={() => {setMenuIsOpen(false)}} className={`${styles.link} link`} to="/blogs">Blogs</NavLink>
