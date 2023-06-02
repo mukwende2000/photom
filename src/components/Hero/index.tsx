@@ -9,10 +9,10 @@ function Hero({ heading, bg }: { heading:string, bg: string }) {
             { pathname === '/' && <p className="uppercase flex items-center gap-2"><span className="inline-block h-[1px] w-8 bg-primary"></span> welcome to the kaffen</p> }
             <h1 className="w-8/12 md:w-6/12 text-5xl md:text-8xl my-8">{ heading }</h1>
             { pathname === '/' ? <div className="flex gap-5 mt-10">
-              <Button background="bg-primary" width="" >
+              <Button background="bg-primary" others="" >
                 explore more
               </Button>
-              <Button background="bg-[#0e1317]" width="">
+              <Button background="bg-[#0e1317]" others="">
                 get delivery
               </Button>
             </div> :

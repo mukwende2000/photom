@@ -8,8 +8,8 @@ type Props = {
 
 function Coffee({alt, content, image, name, price }:Props) {
   return (
-    <div className="my-5 flex justify-between md:justify-start md:gap-10 items-start md:items-center">
-        <div className={`w-[20%] h-40 rounded`}>
+    <div className="my-5 flex justify-between md:justify-start items-start md:items-center gap-10">
+        <div className={`w-[30%] h-40 rounded`}>
             <img src={image} alt={alt} className="w-full h-full rounded" />
         </div>
         <div className="w-6/12">

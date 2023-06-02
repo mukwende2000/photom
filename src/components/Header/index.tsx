@@ -15,7 +15,7 @@ function index() {
           </div>
 
           <Navbar setMenuIsOpen={setMenuIsOpen} menuIsOpen = { menuIsOpen } />
-          <Button background="bg-primary" width="" isMenu>
+          <Button background="bg-primary" others="hidden md:block">
             book a table
           </Button>
           <div onClick={() => setMenuIsOpen(prev => !prev)} className="relative z-30 cursor-pointer md:hidden">

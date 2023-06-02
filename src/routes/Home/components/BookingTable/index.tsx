@@ -8,7 +8,7 @@ function BookingTable() {
     <div className={`${styles.main}`}>
         <div className="container md:flex items-center justify-between">
             <Heading title="booking table for your family members" subtitle="Need a Table On Coffee House"/>
-            <Button background="bg-primary" width="">
+            <Button background="bg-primary" others="">
                 Booking Table <FaCaretRight className="inline text-xl" />
             </Button>
         </div>

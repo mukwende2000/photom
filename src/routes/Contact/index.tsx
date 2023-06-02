@@ -53,7 +53,7 @@ function index() {
                 </div>
                 <input className="p-5 w-full my-2 h-14 bg-black rounded border border-primary" type="text" placeholder="Subject" />
                 <textarea className="w-full p-5 my-2 bg-black rounded border border-primary" name="" id="" cols={30} rows={10} placeholder="Message"></textarea>
-                <Button background="bg-primary" width="">
+                <Button background="bg-primary" others="">
                   send us a message
                 </Button>
             </div>

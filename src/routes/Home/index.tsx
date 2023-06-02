@@ -1,9 +1,10 @@
 import Aboutus from "./components/Aboutus"
 import Hero from '../../components/Hero'
-import Popular from './components/Popular'
+import Popular from '../../components/Popular'
 import styles from './Home.module.scss'
 import BookingTable from "./components/BookingTable"
 import WhyChooseUs from './components/WhyChooseUs'
+import Heading from "../../components/Heading"
 
 import img2 from '../../assets/images/img12.jpg'
 import Service from "./components/Service"
@@ -13,8 +14,12 @@ function index() {
   return (
     <>
       <Hero heading="The London House Cafe" bg={styles.home} />
-      <Aboutus />        
-      <Popular />
+      <Aboutus /> 
+      <div>
+        <Popular>
+            <Heading title="choose best coffee" subtitle="Kaffen Popular Coffee" centerOnMediumScreens />
+        </Popular>
+      </div>       
       <WhyChooseUs />
       <div className="flex overflow-auto whitespace-nowrap">
         {coffees.map(coffee => {

@@ -1,15 +1,15 @@
-import Heading from "../../../../components/Heading"
-import { coffees } from "../../../../data/coffee"
+import { ReactNode } from "react"
+import { coffees } from "../../data/coffee"
 import Coffee from "./components/Coffee"
 import styles from './Popular.module.scss'
-import c from '../../../../assets/images/img15.jpg'
+import Heading from "../Heading"
 
-function index() {
+function index({ children }:{ children: ReactNode}) {
   return (
     <div className={`${styles.main}`}>
       <div className="container">
-          <Heading centerOnMediumScreens title="choose best coffee" subtitle="Kaffen popular Coffee Menu" />
-          <div className=" p-16 bg-[black]/50 grid lg:grid-cols-2 gap-10">
+           { children }
+          <div className="px-5 py-10 bg-[black]/50 grid lg:grid-cols-2 gap-10">
             { coffees.map((coffee, index) => {
               return <Coffee 
                     key={index} 

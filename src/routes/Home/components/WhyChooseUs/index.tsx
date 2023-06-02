@@ -2,6 +2,7 @@ import { FaCoffee, FaLeaf } from 'react-icons/fa'
 import img66 from '../../../../assets/images/img66.jpg'
 import Heading from '../../../../components/Heading'
 import Button from '../../../../components/Button'
+
 function index() {
   return (
     <div className='py-20'>
@@ -32,7 +33,7 @@ function index() {
                     </div>
                 </li>
             </ul>
-            <Button background='bg-primary' width=''>
+            <Button background='bg-primary' others="">
                 Explore More
             </Button>
         </div>

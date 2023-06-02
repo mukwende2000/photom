@@ -3,7 +3,6 @@ import { useState } from "react"
 
 import Heading from "../../components/Heading"
 import Hero from "../../components/Hero"
-import Button from "../../components/Button"
 
 import { blogs } from "../../data/blogs"
 import { FaCalendar, FaCaretRight, FaComment } from "react-icons/fa"
