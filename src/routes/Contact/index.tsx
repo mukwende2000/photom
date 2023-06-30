@@ -1,13 +1,25 @@
-import { FaEnvelope, FaEnvelopeOpen, FaEnvelopeOpenText, FaLocationArrow, FaPhone, FaSearchLocation } from "react-icons/fa"
+import { FaEnvelopeOpenText, FaPhone, FaSearchLocation } from "react-icons/fa"
+import { Splide, SplideSlide } from "@splidejs/react-splide"
+import '@splidejs/react-splide/css'
+
+import img5 from '../../assets/images/img5.jpg'
+import img6 from '../../assets/images/img6.jpg'
+import img7 from '../../assets/images/img7.jpg'
+import img8 from '../../assets/images/img8.jpg'
+import img9 from '../../assets/images/img9.jpg'
+import img10 from '../../assets/images/img10.jpg'
+import img11 from '../../assets/images/img11.jpg'
+
 import ContactInfo from "../../components/Contactinfo/ContactInfo"
 import Hero from "../../components/Hero"
 import styles from './Contact.module.scss'
-import Button from "../../components/Button"
-import Heading from "../../components/Heading"
+import Form from './components/Form'
 import Sponsors from "../../components/Sponsors"
 
 
+
 function index() {
+  const slides = [ img5, img6, img7, img8, img9, img10, img11]
   return (
     <>
     <section className="bg-[#0e1317]">
@@ -37,25 +49,23 @@ function index() {
               <FaPhone className="text-5xl text-primary m-auto mb-5" />
             </ContactInfo>
         </div>
-        <div className="py-10">
-          <form className="bg-black p-5">
-            <Heading  title="contact us" subtitle="Send Us a Message" />
-            <div>
-                <div className="flex flex-col md:flex-row md:gap-10">
-                  <input className="w-full p-5 my-2 h-14 bg-black rounded border border-primary" type="text" placeholder="Full Name"/>
-                  <input className="w-full p-5 my-2 h-14 bg-black rounded border border-primary" type="text" placeholder="Email Address" />
-                  <input className="w-full p-5 my-2 h-14 bg-black rounded border border-primary" type="text" placeholder="Phone Number"/>
-                </div>
-                <input className="p-5 w-full my-2 h-14 bg-black rounded border border-primary" type="text" placeholder="Subject" />
-                <textarea className="w-full p-5 my-2 bg-black rounded border border-primary" name="" id="" cols={30} rows={10} placeholder="Message"></textarea>
-                <Button background="bg-primary" others="">
-                  send us a message
-                </Button>
-            </div>
-          </form>
-        </div>
+        <Form />
       </div>  
-       <Sponsors/>
+      <Splide options={{
+        perPage: 4,
+        gap: '1rem',
+        drag: 'free',
+        arrows: false,
+        pagination: false,
+        type:'loop'
+      }}>
+      { slides.map(slide => {
+         return <SplideSlide>
+          <img src={slide} alt="" className="w-full h-full" />
+         </SplideSlide> 
+      })}
+      </Splide>
+      <Sponsors/>
     </section>
     </>
   )

@@ -6,13 +6,13 @@ import CallToAction from "./components/CallToAction"
 import WhyChooseUs from './components/WhyChooseUs'
 import Heading from "../../components/Heading"
 
-import img66 from '../../assets/images/img66.jpg'
+import { Splide, SplideSlide } from "@splidejs/react-splide"
+import '@splidejs/react-splide/css'
 
-import img2 from '../../assets/images/img12.jpg'
-import Service from "./components/Service"
+import img66 from '../../assets/images/img66.jpg'
+import Testimonies from "./components/Testimonies"
 
 function index() {
-  const coffees = [img2, img2,img2, img2, img2, img2]
   return (
     <>
       <Hero heading="The London House Cafe" bg={styles.home} />
@@ -23,13 +23,7 @@ function index() {
         </Popular>
       </div>       
       <WhyChooseUs url={img66} />
-      <div className="flex overflow-auto whitespace-nowrap">
-        {coffees.map(coffee => {
-          return <Service url={coffee} alt="coffee">
-              <div></div>
-          </Service>
-        })}
-      </div>
+      <Testimonies />
       <CallToAction title="need a table on coffee house" subTitle="Need A Table For Your Family?" />
     </> 
   )

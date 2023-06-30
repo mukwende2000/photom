@@ -28,16 +28,8 @@ function index({ menuIsOpen, setMenuIsOpen} : Props) {
           <NavLink onClick={() => {setMenuIsOpen(false)}} className={`${styles.link} link`} to="/">Home</NavLink>
           <NavLink onClick={() => {setMenuIsOpen(false)}} className={`${styles.link} link`} to="/about">About</NavLink>
           <NavLink onClick={() => {setMenuIsOpen(false)}} className={`${styles.link} link`} to="/menu">Menu</NavLink>
-          <NavLink onClick={() => {setMenuIsOpen(false)}} className={`${styles.link} link group`} to="/page">
-            <span className='flex items-center'>page <FaCaretDown /></span>
-            
-            <ul className={`text-white p-5 absolute ml-10 hidden group-hover:block opacity-0 group-hover:opacity-100 duration-300`}>
-                <li><NavLink to="/history">History</NavLink></li>
-                <li><NavLink to="/gallery">Galley</NavLink></li>
-                <li><NavLink to="/faq">Faq</NavLink></li>
-            </ul>
-          </NavLink>
-          <NavLink onClick={() => {setMenuIsOpen(false)}} className={`${styles.link} link`} to="/blogs">Blogs</NavLink>
+          <NavLink onClick={() => {setMenuIsOpen(false)}} className={`${styles.link} link`} to="/history">History</NavLink>  
+          <NavLink onClick={() => {setMenuIsOpen(false)}} className={`${styles.link} link`} to="/faq">Faq</NavLink>
           <NavLink onClick={() => {setMenuIsOpen(false)}} className={`${styles.link} link`} to="/contact">Contact</NavLink>
       </div>
     </nav>

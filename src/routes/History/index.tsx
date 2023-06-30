@@ -4,12 +4,43 @@ import founder from '../../assets/images/img26.jpg'
 import img48 from '../../assets/images/img48.png'
 import img49 from '../../assets/images/img49.png'
 import Heading from '../../components/Heading'
+import Timeline from './Timeline'
+
+import { Splide, SplideSlide } from '@splidejs/react-splide'
+import "@splidejs/react-splide/css"
+
+import { useState } from 'react'
+import { FaCaretLeft, FaCaretRight } from 'react-icons/fa'
 
 function index() {
+  const [headline, setHeadline] = useState(0)
+
+  type Headlines = {
+    title: string
+    date: string
+  }
+  const headlines: Headlines[] = [
+    {
+      title: 'Kaffen was founded',
+      date: '19, December, 2000'
+    },
+    {
+      title: 'We started cooking for you',
+      date: '01, January, 2001'
+    }, 
+    {
+      title: 'We got a michelin star',
+      date: '01, March, 2003'
+    },
+    {
+      title: 'A new restaurant was build in paris',
+      date: '01, December, 2004'
+    }
+  ]
   return (
     <>
       <Hero heading="Our History" bg={`${styles.hero}`} />
-      <main>
+      <main className='container'>
         <div className='bg-[#0e1317] py-20'>
         <div className="relative container py-10" >
           <img className='w-8 absolute -left-10' src={img48} alt="" />
@@ -31,6 +62,18 @@ function index() {
         </div>
         <div className=''>
             <Heading title='our kaffen history' subtitle='Something To Know About Our History' />
+            <Splide options={{
+              // arrows: false,
+              // pagination: false
+            }}>
+              {
+                headlines.map(headline => {
+                  return <SplideSlide>
+                    <Timeline year={headline.date.slice(headline.date.indexOf('2'))} headline={headline.title} date={headline.date} />
+                  </SplideSlide>
+                })
+              }
+            </Splide>
         </div>
       </main>
     </>

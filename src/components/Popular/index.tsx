@@ -2,7 +2,6 @@ import { ReactNode } from "react"
 import { coffees } from "../../data/coffee"
 import Coffee from "./components/Coffee"
 import styles from './Popular.module.scss'
-import Heading from "../Heading"
 
 function index({ children }:{ children: ReactNode}) {
   return (
